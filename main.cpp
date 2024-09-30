@@ -45,13 +45,13 @@ void initialize_tile_names(std::map<std::string, int> tiles) {
     tiles.insert({"9s", 0x39});
     
     // honor tiles
-    tiles.insert({"1p", 0x21});
-    tiles.insert({"2p", 0x22});
-    tiles.insert({"3p", 0x23});
-    tiles.insert({"4p", 0x24});
-    tiles.insert({"5p", 0x25});
-    tiles.insert({"6p", 0x26});
-    tiles.insert({"7p", 0x27});
+    tiles.insert({"E", 0x41});
+    tiles.insert({"S", 0x42});
+    tiles.insert({"W", 0x43});
+    tiles.insert({"N", 0x44});
+    tiles.insert({"W", 0x45});
+    tiles.insert({"G", 0x46});
+    tiles.insert({"R", 0x47});
 }
 
 
