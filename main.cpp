@@ -60,7 +60,10 @@ void print_hand(std::vector<int> &hand, const std::map<int, std::string> tile_na
 			break;
 		}
 	}
-	std::cout << man << "m " << pin << "p " << sou << "s " << honor << ", draw: " << tile_names.at(hand.at(hand.size() - 1));
+	std::cout << man << ((man == "") ? "" : "m ");
+	std::cout << pin << ((pin == "") ? "" : "p ");
+	std::cout << sou << ((sou == "") ? "" : "s ");
+	std::cout << honor << "  draw: " << tile_names.at(hand.at(hand.size() - 1));
 	std::cout << std::endl;
 }
 
@@ -304,6 +307,7 @@ int main() {
 	// game loop
 	std::string input;
 	while (input != "q") {
+		std::cout << "Your hand: ";
 		print_hand(hand, tile_names);
 		std::cout << "Type the tile to discard" << std::endl;
 		std::cout << "> ";
@@ -341,6 +345,7 @@ int main() {
 			} else {
 				// not a win, reset game
 				std::cout << "This is not a winning hand..." << std::endl;
+				std::cout << "Play again? (Y/N)" << std::endl;
 				std::cin >> input;
 				if (input == "n" || input == "q") {
 					std::cout << "Thanks for playing!";
