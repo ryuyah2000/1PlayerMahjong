@@ -10,7 +10,6 @@
 #include <ctime>
 #include <algorithm> // shuffle
 
-
 // puts 4 copies of each tile into the wall
 void initialize_wall(std::array<int, 136> &wall, const std::map<int, std::string> tiles) {
 	int i = 0;
@@ -112,7 +111,7 @@ bool check_win(std::vector<int> &hand, std::vector<bool> &visited, std::vector<b
 							if (j + 1 >= hand.size()) {
 								// invalid hand, return false
 								return false;
-							} else {
+							} else if (!visited.at(j + 1)) { {
 								if (hand.at(j) == hand.at(j + 1)) {
 									// triplet found, mark as visited and won and search for next shape
 									visited.at(i) = visited.at(j) = visited.at(j + 1) = true;
