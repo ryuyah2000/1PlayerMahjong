@@ -111,7 +111,7 @@ bool check_win(std::vector<int> &hand, std::vector<bool> &visited, std::vector<b
 							if (j + 1 >= hand.size()) {
 								// invalid hand, return false
 								return false;
-							} else if (!visited.at(j + 1)) { {
+							} else if (!visited.at(j + 1)) {
 								if (hand.at(j) == hand.at(j + 1)) {
 									// triplet found, mark as visited and won and search for next shape
 									visited.at(i) = visited.at(j) = visited.at(j + 1) = true;
